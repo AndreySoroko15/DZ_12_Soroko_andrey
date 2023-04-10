@@ -7,9 +7,9 @@ function task1() {
   let arr = [1, 2, 3, 4, 5];
 
   for (i = 0; i < arr.length; i++) {
-    document.write(`${arr[i]}, `)
+    document.write(`${arr[i]}, `);
   } 
-  return arr
+  return arr;
 }
 console.log(task1());
 
@@ -95,12 +95,71 @@ function task5() {
     } else {
       document.write(`${arr[i]}<br>`)
     }
-    }
   }
+}
 
 console.log(task5());
 
 // ------------------------ ЗАДАНИЕ 6 -------------------------------------------------------------------
 document.write(`<br><hr>   6. Создайте массив с произвольными данными. Добавьте в конец массива любой элемент, 
 и получите последний элемент массива, используя свойство length.   <br><br>`)
+  
+  let arr = [0, 5, 10, 15, 20,];
+    document.write(`${arr} <br>`);
+
+    arr.push('MyItSchool');
+    document.write(`${arr} <br>`); 
+    document.write(`${arr[arr.length - 1]} <br>`);
+
+// ------------------------ ЗАДАНИЕ 7 -------------------------------------------------------------------
+document.write(`<br><hr>   7. Запросите у пользователя по очереди числовые значения при помощи prompt и 
+сохраните их в массив. Собирайте числа до тех пор, пока пользователь не введет пустое 
+значение. Выведите получившийся массив на экран. Выполните сортировку чисел 
+массива, и выведите его на экран.   <br><br>`)
+/*
+let arrNum = [],
+    nums; 
+
+while (true) {
+  nums = +prompt('Введите число', 22);
+  if (Number.isInteger(nums)) {
+    arrNum.push(nums);
+  }
+  if (nums == '') {
+    arrNum.pop()
+    break;
+  } 
+  if (isNaN(nums)) {
+    alert('Было введено не число!')
+  }
+// ------------ не понимаю, почему не работает через else if
+}
+
+document.write(arrNum);
+
+arrNum.sort(function(a, b){
+  return a - b;
+});
+document.write(`<br> ${arrNum}`); // скопировал с прошлого урока
+*/
+// -------------------------------------------------- ЗАДАНИЕ 8 -----------------------------------
+document.write(`<br><hr>   8.Переверните массив [12, false, ‘Текст’, 4, 2, -5, 0] (выведите в обратном порядке), 
+используя цикл while и метод reverse.   <br><br>`)
+
+let arr8 = [12, false, 'Текст', 4, 2, -5, 0];
+let len = arr8.length
+
+
+function task8() {
+  let i = len - 1, 
+      reverse = []
+  while (i >= 0) {
+    reverse += arr8[i] + '; '
+    i--
+  } return `Цикл while: ${reverse}`
+}
+document.write(`${task8()} <br>`);
+
+arr8.reverse(); 
+document.write(`Метод reverse: ${arr8} `);
 
